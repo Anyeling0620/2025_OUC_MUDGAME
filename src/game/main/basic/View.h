@@ -11,10 +11,13 @@ public:
     explicit View(Game& game_logic);
 
     // 主菜单
-    void ShowMainMenu();
+    void showMainMenu();
 
     // 加载栏
-    void ShowLoadingScreen(const std::string& subtitle);
+    void showLoadingScreen(const std::string& subtitle);
+
+    // 游戏介绍
+    void showGameIntroScreen();
 
 private:
     // 保存 Game 对象的引用，以便在按钮点击时调用其方法

@@ -6,7 +6,7 @@
 #define INC_2025_OUC_MUDGAME_ABSTRACTENEMY_H
 
 
-class AbstractEnemy {
+class Enemy {
 
 };
 

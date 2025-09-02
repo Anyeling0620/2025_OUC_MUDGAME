@@ -16,7 +16,7 @@ Game::~Game() {
 void Game::run() {
     running = true;
     if (view_) {
-        view_->ShowMainMenu();
+        view_->showMainMenu();
     }
 }
 
@@ -26,7 +26,7 @@ void Game::init() {
 
 void Game::startNewGame() {
     if (view_) {
-        view_->ShowLoadingScreen("正在加载新游戏");
+        view_->showLoadingScreen("正在加载新游戏");
     }
     std::cout << "开始新游戏..." << std::endl;
     // TODO
@@ -36,7 +36,7 @@ void Game::startNewGame() {
 void Game::loadGame() {
     std::string saveName = "default";
     if (view_) {
-        view_->ShowLoadingScreen("正在打开存档{" + saveName + "}");
+        view_->showLoadingScreen("正在打开存档{" + saveName + "}");
     }
     std::cout << "读取存档..." << std::endl;
     // TODO
@@ -45,8 +45,9 @@ void Game::loadGame() {
 
 void Game::showGameIntro() {
     std::cout << "游戏介绍..." << std::endl;
-    // TODO
-    // ... 显示介绍的具体逻辑 ...
+    if (view_) {
+        view_->showGameIntroScreen();
+    }
 }
 
 void Game::showGameSettings() {

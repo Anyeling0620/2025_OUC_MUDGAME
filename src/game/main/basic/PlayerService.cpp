@@ -16,13 +16,6 @@ void PlayerService::shutdown() {
     // 玩家数据保存校徽逻辑
 }
 
-void PlayerService::registerPlayer(const std::string& name) {
-    player.setName(name);
-}
-
-Player &PlayerService::getPlayer() {
-    return player;
-}
 
 PlayerService::PlayerService() = default;
 
